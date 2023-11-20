@@ -20,9 +20,8 @@ farven på elementerne skal være blå. brug evt. elelement.style.backgroundColo
 */
 
 // din kode her
-const figures = Array.from(document.getElementsByClassName('myFigure'));
-
-figures.forEach(changeColor);
+changeColor(redFigure);
+changeColor(yellowFigure);
 
 function changeColor(element){
     element.style.backgroundColor = "#00f";
@@ -53,6 +52,9 @@ Du skal finde alle elementer med klassen purpleFigures og console logge resultat
 */
 
 // din kode her
+let allFigures = document.getElementsByClassName('purpleFigures');
+
+console.log(allFigures);
 
 
 /* opgave 3.2
@@ -62,7 +64,13 @@ array.from beskrivelse HER: https://developer.mozilla.org/en-US/docs/Web/JavaScr
 */
 
 // din kode her
+const purpleFigures = Array.from(document.getElementsByClassName('purpleFigures'));
 
+purpleFigures.forEach(backgroundColor)
+
+function backgroundColor(figures){
+    figures.style.backgroundColor = "#f00";
+}
 
 /* opgave 3.3
 Brug din array til at ændre h3 elementets, inden i purpleFigures, tekst til RED. du kan bruge
@@ -71,7 +79,6 @@ myElement.children[0].innerHTML til at ændre 1. child elements inner html.
 
 
 // din kode her
-
 
 
 /* opgave 4
