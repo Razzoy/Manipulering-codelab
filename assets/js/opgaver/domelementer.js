@@ -8,17 +8,25 @@ Du skal finde elementet med id="yellowFigure" og console logge det.
 */
 
 // din kode her
+const redFigure = document.getElementById("redFigure");
+console.log(redFigure);
 
+const yellowFigure = document.getElementById("yellowFigure");
+console.log(yellowFigure);
 
 /* opgave 1.2
 Du skal ændre baggrundsfarve på de to elementer du har fundet i opgave 1.1
 farven på elementerne skal være blå. brug evt. elelement.style.backgroundColor
 */
 
-
 // din kode her
+const figures = Array.from(document.getElementsByClassName('myFigure'));
 
+figures.forEach(changeColor);
 
+function changeColor(element){
+    element.style.backgroundColor = "#00f";
+}
 
 /* opgave 2.1
 Du skal oprette følgende HTML elementer i Elementet med id opgaveTwo.
@@ -28,6 +36,15 @@ Du skal oprette følgende HTML elementer i Elementet med id opgaveTwo.
 
 
 // din kode her
+const taskTwo = document.getElementById("opgaveTwo");
+const h2 = document.createElement('h2');
+const p = document.createElement('p');
+h2.innerText = "Opgave 2.1 løsning";
+p.innerText = "Jeg har løst opgave 2.1";
+
+taskTwo.appendChild(h2);
+taskTwo.appendChild(p);
+
 
 
 // opgave 3 liveHTML lists
