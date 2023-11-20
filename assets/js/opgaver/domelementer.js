@@ -52,7 +52,7 @@ Du skal finde alle elementer med klassen purpleFigures og console logge resultat
 */
 
 // din kode her
-let allFigures = document.getElementsByClassName('purpleFigures');
+const allFigures = document.getElementsByClassName('purpleFigures');
 
 console.log(allFigures);
 
@@ -79,6 +79,15 @@ myElement.children[0].innerHTML til at ændre 1. child elements inner html.
 
 
 // din kode her
+const children = purpleFigures[0];
+
+children.forEach(figureText);
+
+function figureText(myElement){
+    myElement.innerHTML = '<h3>RED</h3>';
+}
+
+// purpleFigures[0].innerHTML = '<h3>RED</h3>';
 
 
 /* opgave 4
