@@ -79,15 +79,11 @@ myElement.children[0].innerHTML til at ændre 1. child elements inner html.
 
 
 // din kode her
-const children = purpleFigures[0];
+purpleFigures.forEach(PurpleFigure => {
+    const h3Element = PurpleFigure.querySelector('h3');
 
-children.forEach(figureText);
-
-function figureText(myElement){
-    myElement.innerHTML = '<h3>RED</h3>';
-}
-
-// purpleFigures[0].innerHTML = '<h3>RED</h3>';
+    h3Element.innerHTML = 'RED';
+})
 
 
 /* opgave 4
@@ -104,7 +100,19 @@ const myData = {
 
 
 // din kode her
+const opgaveFourElement = document.getElementById('opgaveFour');
+const figureElement = document.createElement('figure');
+const imgElement = document.createElement('img');
 
+imgElement.src = myData.image;
+imgElement.alt = myData.name;
+imgElement.style.width = '100%';
 
+const figcaptionElement = document.createElement('figcaption');
+figcaptionElement.innerHTML = '<h2>' + myData.name + '</h2>' + '<p>' + myData.description + '</p>';
 
+figureElement.appendChild(imgElement);
+figureElement.appendChild(figcaptionElement);
+
+opgaveFourElement.appendChild(figureElement);
 
